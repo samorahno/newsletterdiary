@@ -15,6 +15,8 @@ router.get("/lead/:leadid/edit", landing.show_edit_lead);
 
 router.post("/lead/:leadid/edit", landing.edit_lead);
 
+router.post("/lead/:leadid/delete", landing.delete_lead);
+
 router.get("/users", function(req, res, next) {
   res.json({
     message: "welcome here",
