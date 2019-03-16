@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  if lead
+    form(action='/lead/' + lead.id + '/edit', method='POST')
+        input(value=lead.email, name='email', type='email')
+        button(type='SUBMIT') Edit Lead

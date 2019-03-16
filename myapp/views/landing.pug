@@ -10,4 +10,20 @@ block content
     input(type='number', placeholder='Enter Age')
     br
     button(type='submit') Submit Email
+    if leads
+      h2 #{page_title}
+      br
+      table
+        tr 
+          td Email 
+          td Created at
+          td Action
+        
+            for lead in leads
+              tr
+              td #{lead.email}
+              td #{lead.createdAt} 
+              td(colspan='2')
+               a(href='/lead/' + lead.id) Details&nbsp;&nbsp;&nbsp;
+               a(href='/lead/' + lead.id) Delete
   h5 copyright &copy 2018

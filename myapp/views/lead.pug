@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  if lead
+    p Email: #{lead.email}
+    p Created at: #{lead.createdAt}
+    button 
+     a(href='/leads') Go Back
+    button 
+     a(href='/lead/' + lead.id + '/edit') Edit
